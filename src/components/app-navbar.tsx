@@ -24,7 +24,7 @@ export default function AppNavbar() {
     },
     {
       label: "Profile",
-      href: "/",
+      href: "/profile",
     },
   ];
 
