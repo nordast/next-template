@@ -1,11 +1,12 @@
-import { Button } from "@nextui-org/button";
+import { Card, CardBody } from "@nextui-org/card";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div>
-      <h1 className="text-bold text-2xl text-violet-500">Hello</h1>
-
-      <Button>Button</Button>
-    </div>
+    <Card className="mx-auto mt-4 max-w-md">
+      <CardBody className="text-center">
+        <h1 className="text-5xl">Next.js Template</h1>
+        <p className="mt-4 text-xl">A simple starter for Next.js</p>
+      </CardBody>
+    </Card>
   );
 }

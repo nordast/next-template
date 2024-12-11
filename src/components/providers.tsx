@@ -5,7 +5,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <NextUIProvider>
+    <NextUIProvider className="flex h-full w-full flex-col">
       <NextThemesProvider attribute="class">{children}</NextThemesProvider>
     </NextUIProvider>
   );
