@@ -41,6 +41,7 @@ A list of CLI generators, starter kits / boilerplates and toolkits to kick start
 ```bash
 npm i -D prettier
 npm i -D @trivago/prettier-plugin-sort-imports
+npm i -D eslint-plugin-unused-imports
 npm i -D prettier prettier-plugin-tailwindcss
 ```
 
@@ -50,10 +51,14 @@ Update the **eslint.config.mjs** as following:
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    plugins: {
+      "unused-imports": unusedImports,
+    },
     rules: {
       "prefer-arrow-callback": ["error"],
       "prefer-template": ["error"],
       semi: ["error"],
+      "unused-imports/no-unused-imports": "error",
     },
   },
 ];
