@@ -8,6 +8,13 @@
       "when": 1733999997430,
       "tag": "0000_perpetual_night_nurse",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1734005006761,
+      "tag": "0001_silly_black_cat",
+      "breakpoints": true
     }
   ]
 }

@@ -8,6 +8,12 @@ const options: NextAuthOptions = {
     signIn: "/",
   },
   adapter: DrizzleAdapter(db),
+  callbacks: {
+    session({ session, user }) {
+      session.user.id = user.id;
+      return session;
+    },
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",

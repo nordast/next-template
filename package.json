@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.4",
+    "@conform-to/react": "^1.2.2",
+    "@conform-to/zod": "^1.2.2",
     "@nextui-org/react": "^2.6.8",
     "@tabler/icons-react": "^3.24.0",
     "cross-env": "^7.0.3",
