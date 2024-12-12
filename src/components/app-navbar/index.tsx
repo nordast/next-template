@@ -12,22 +12,27 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { IconPackage } from "@tabler/icons-react";
+import { useSession } from "next-auth/react";
 import AuthButton from "@/components/app-navbar/auth-button";
 import { ThemeSwitcher } from "@/components/app-navbar/theme-switcher";
 
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { status } = useSession();
 
   const menuItems = [
     {
       label: "Home",
       href: "/",
     },
-    {
+  ];
+
+  if (status === "authenticated") {
+    menuItems.push({
       label: "Profile",
       href: "/profile",
-    },
-  ];
+    });
+  }
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
