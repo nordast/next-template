@@ -12,7 +12,8 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { IconPackage } from "@tabler/icons-react";
-import { ThemeSwitcher } from "@/components/theme-switcher";
+import AuthButton from "@/components/app-navbar/auth-button";
+import { ThemeSwitcher } from "@/components/app-navbar/theme-switcher";
 
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -49,9 +50,9 @@ export default function AppNavbar() {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
-        {/*<NavbarItem>*/}
-        {/*  <AuthButton minimal={false} />*/}
-        {/*</NavbarItem>*/}
+        <NavbarItem>
+          <AuthButton minimal={false} />
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
@@ -64,9 +65,9 @@ export default function AppNavbar() {
             </Link>
           </NavbarMenuItem>
         ))}
-        {/*<NavbarMenuItem>*/}
-        {/*  <AuthButton />*/}
-        {/*</NavbarMenuItem>*/}
+        <NavbarMenuItem>
+          <AuthButton />
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
